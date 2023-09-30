@@ -23,6 +23,8 @@ namespace SharpKeys
         private GroupBox groupBox1;
         private Panel mainPanel;
         private Button btnCancel;
+        private TextBox txtFilter;
+
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -72,6 +74,7 @@ namespace SharpKeys
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.txtFilter = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.mainPanel.SuspendLayout();
@@ -80,18 +83,21 @@ namespace SharpKeys
             // lbFrom
             // 
             this.lbFrom.IntegralHeight = false;
-            this.lbFrom.Location = new System.Drawing.Point(9, 20);
+            this.lbFrom.ItemHeight = 20;
+            this.lbFrom.Location = new System.Drawing.Point(14, 31);
+            this.lbFrom.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lbFrom.Name = "lbFrom";
             this.lbFrom.ScrollAlwaysVisible = true;
-            this.lbFrom.Size = new System.Drawing.Size(230, 276);
+            this.lbFrom.Size = new System.Drawing.Size(343, 422);
             this.lbFrom.TabIndex = 0;
             // 
             // btnFrom
             // 
             this.btnFrom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFrom.Location = new System.Drawing.Point(164, 311);
+            this.btnFrom.Location = new System.Drawing.Point(246, 478);
+            this.btnFrom.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnFrom.Name = "btnFrom";
-            this.btnFrom.Size = new System.Drawing.Size(75, 23);
+            this.btnFrom.Size = new System.Drawing.Size(112, 35);
             this.btnFrom.TabIndex = 1;
             this.btnFrom.Text = "Type &Key";
             this.btnFrom.Click += new System.EventHandler(this.btnFrom_Click);
@@ -99,9 +105,10 @@ namespace SharpKeys
             // btnTo
             // 
             this.btnTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnTo.Location = new System.Drawing.Point(164, 311);
+            this.btnTo.Location = new System.Drawing.Point(246, 478);
+            this.btnTo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnTo.Name = "btnTo";
-            this.btnTo.Size = new System.Drawing.Size(75, 23);
+            this.btnTo.Size = new System.Drawing.Size(112, 35);
             this.btnTo.TabIndex = 0;
             this.btnTo.Text = "Type K&ey";
             this.btnTo.Click += new System.EventHandler(this.btnTo_Click);
@@ -109,19 +116,22 @@ namespace SharpKeys
             // lbTo
             // 
             this.lbTo.IntegralHeight = false;
-            this.lbTo.Location = new System.Drawing.Point(9, 20);
+            this.lbTo.ItemHeight = 20;
+            this.lbTo.Location = new System.Drawing.Point(14, 31);
+            this.lbTo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lbTo.Name = "lbTo";
             this.lbTo.ScrollAlwaysVisible = true;
-            this.lbTo.Size = new System.Drawing.Size(230, 276);
+            this.lbTo.Size = new System.Drawing.Size(343, 422);
             this.lbTo.TabIndex = 1;
             // 
             // btnOK
             // 
             this.btnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOK.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnOK.Location = new System.Drawing.Point(367, 373);
+            this.btnOK.Location = new System.Drawing.Point(550, 574);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(75, 23);
+            this.btnOK.Size = new System.Drawing.Size(112, 35);
             this.btnOK.TabIndex = 2;
             this.btnOK.Text = "OK";
             // 
@@ -129,9 +139,11 @@ namespace SharpKeys
             // 
             this.groupBox2.Controls.Add(this.btnTo);
             this.groupBox2.Controls.Add(this.lbTo);
-            this.groupBox2.Location = new System.Drawing.Point(271, 12);
+            this.groupBox2.Location = new System.Drawing.Point(406, 18);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(251, 347);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox2.Size = new System.Drawing.Size(376, 534);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "&To this key:";
@@ -140,27 +152,31 @@ namespace SharpKeys
             // 
             this.groupBox1.Controls.Add(this.lbFrom);
             this.groupBox1.Controls.Add(this.btnFrom);
-            this.groupBox1.Location = new System.Drawing.Point(14, 12);
+            this.groupBox1.Location = new System.Drawing.Point(21, 18);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(251, 347);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox1.Size = new System.Drawing.Size(376, 534);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "&Map this key:";
             // 
             // mainPanel
             // 
-            this.mainPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.mainPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.mainPanel.BackColor = System.Drawing.Color.Transparent;
             this.mainPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.mainPanel.Controls.Add(this.txtFilter);
             this.mainPanel.Controls.Add(this.groupBox1);
             this.mainPanel.Controls.Add(this.btnOK);
             this.mainPanel.Controls.Add(this.groupBox2);
             this.mainPanel.Controls.Add(this.btnCancel);
-            this.mainPanel.Location = new System.Drawing.Point(12, 12);
+            this.mainPanel.Location = new System.Drawing.Point(18, 18);
+            this.mainPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(537, 410);
+            this.mainPanel.Size = new System.Drawing.Size(804, 630);
             this.mainPanel.TabIndex = 4;
             this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
             // 
@@ -168,21 +184,31 @@ namespace SharpKeys
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(447, 373);
+            this.btnCancel.Location = new System.Drawing.Point(670, 574);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.Size = new System.Drawing.Size(112, 35);
             this.btnCancel.TabIndex = 3;
             this.btnCancel.Text = "Cancel";
             // 
+            // txtFilter
+            // 
+            this.txtFilter.Location = new System.Drawing.Point(21, 582);
+            this.txtFilter.Name = "txtFilter";
+            this.txtFilter.Size = new System.Drawing.Size(357, 26);
+            this.txtFilter.TabIndex = 4;
+            this.txtFilter.TextChanged += new System.EventHandler(this.txtFilter_TextChanged);
+            // 
             // Dialog_KeyItem
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(561, 434);
+            this.ClientSize = new System.Drawing.Size(842, 668);
             this.Controls.Add(this.mainPanel);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Dialog_KeyItem";
@@ -194,6 +220,7 @@ namespace SharpKeys
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.mainPanel.ResumeLayout(false);
+            this.mainPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -261,6 +288,19 @@ namespace SharpKeys
 
             graphics.FillRectangle(linearGradientBrush, rectangle);
 
+        }
+
+        private void txtFilter_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                //lbFrom
+            }
+            catch (Exception)
+            {
+
+                
+            }
         }
     }
 }
